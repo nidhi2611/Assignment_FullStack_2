@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Page Layout Creation</title>
+	<meta  name="viewport" content="width=device-width">
+	<style>
+		#page{
+			border:5px solid lightgrey ;
+			padding: 7px;
+		}
+		#header{
+			width:100%;
+			background-color:grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			height:75px;
+			font-size: 25px;
+			margin-bottom: 7px;
+		}
+		#banner{
+			width:100%;
+			background-color:lightblue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			height:400px;
+			font-size: 25px;
+			margin-bottom: 7px;
+
+		}
+		h2{
+			color: black;
+			text-align: center;
+			font-weight:bold;
+		}
+		#circle_container:after{
+            content:'';
+            display: block;
+            clear:both;
+
+
+		}
+		#circle_container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.circle{
+			height:300px;
+			width:22%;
+			margin-right:25px;
+			background-color: green;
+			border-radius: 100%;
+			margin-bottom: 7px;
+			float: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		#section2:after{
+			content:'';
+            display: block;
+            clear:both;
+		}
+		#left-side{
+			width:45%;
+			height:408px;
+			background-color: grey;
+			display:flex;
+			justify-content: center;
+			align-items:center;
+			font-size: 25px;
+			color:#ffffff;
+			float:left;
+			margin-right: 15px;
+		}
+		
+		#article1{
+			background-color: orange;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			color:#ffffff;
+			font-size:20px;
+			margin-bottom: 10px;
+			height:130px;
+			width:53%;
+		}
+		#article3{
+			background-color: orange;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			color:#ffffff;
+			font-size:20px;
+			height:130px;
+			width:53%;
+		}
+		#rect_container:after{
+            content:'';
+            display: block;
+            clear:both;
+
+
+		}
+		#rect_container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.rect{
+			width:22%;
+			height:200px;
+			background-color: red;
+			margin:20px;
+			float:left;
+		}
+		#footer{
+			width:100%;
+			background-color:violet;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #ffffff;
+			height:75px;
+			font-size: 25px;
+			margin-bottom: 7px;
+		}
+	</style>
+</head>
+<body style="padding: 15px;">
+	<div id="page">
+		<div id="header">Header</div>
+
+		<div id="banner">Banner</div>
+
+		<div id="section1">
+			<h2> Section-1</h2>
+			<div id="circle_container">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
+		</div>
+
+		<div id="section2">
+			<h2> Section-2</h2>
+			<div id="left-side">
+				Main Content
+			</div>
+			<div id="right-side">
+				<div id="article1">Article-1</div>
+				<div id="article1">Article-2</div>
+				<div id="article3">Article-3</div>
+			</div>
+		</div>
+
+		<div id="section3">
+			<h2>Section-3</h2>
+			<div id="rect_container">
+				<div class="rect"></div>
+				<div class="rect"></div>
+				<div class="rect"></div>
+				<div class="rect"></div>
+			</div>
+		</div>
+
+		<div id="section4">
+			<h2>Section-4</h2>
+			<div id="footer">Footer</div>
+		</div>
+	</div>
+</body>
+</html>
