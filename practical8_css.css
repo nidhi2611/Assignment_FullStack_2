@@ -23,11 +23,11 @@
 			position: fixed;
 			top: 0px;
 			margin-bottom: 20px;
-			padding: 10px;
+			
 		}
 		.header ul li{
 			display:inline-block;
-			float:left;
+			
 		}
 		.header ul li a{
 			text-decoration: none;
@@ -55,7 +55,7 @@
 
   		}
   		#banner h1{
-      		color: white;
+      		color: black;
       		font-size: 75px;
       		
   		}
