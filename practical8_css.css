@@ -44,7 +44,10 @@
 			color:black;
 		}
 		#banner 
-		{
+		{	background-image:url(computer_image.JPG);
+			background-repeat:no-repeat;
+			background-size:cover;
+			
     			height: 100vh;
     			margin-bottom: 100px;
     			width: 100%;
@@ -107,7 +110,7 @@
    		 float: right;
    		 width: 48%;
     	height: 150px;
-    	background-image: url(C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section1.JPG);
+    	background-image: url(section1.JPG);
     	background-repeat: none;
     	background-size: cover;
     	color: black;
@@ -120,7 +123,7 @@
 		    float: right;
 		    width: 48%;
 		    height: 150px;
-		    background-image:url(C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section2.JPG);
+		    background-image:url(section2.JPG);
 		    background-repeat: none;
 		    background-size: cover;
 		    color: black;
@@ -132,7 +135,7 @@
 	    float: right;
 	    width: 48%;
 	    height: 150px;
-	    background-image:url(C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section3.JPG);
+	    background-image:url(section3.JPG);
 	    background-repeat: none;
 	    background-size: cover;
 	    color: black;
