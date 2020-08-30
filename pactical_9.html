@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical-9-Rough</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		#header{
+			width: 100%;
+			height:70px;
+			background-color: grey;
+			padding: 0px 50px;
+
+		}
+		#menu{
+			float: right;
+			list-style: none;
+
+		}
+		#menu li{
+			display: block;
+			float:left;
+			line-height: 70px;
+			padding: 0px 30px;
+		}
+		#menu li a{
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			padding: 15px;
+			border-radius: 10px;
+		}
+		#menu li a:hover{
+			background-color: white;
+			color: black;
+		}
+		.show-btn{
+			float: right;
+		}
+		.show-btn,.hide-btn{
+			line-height: 70px;
+			color:white;
+			font-size: 20px;
+			display: none;
+		}
+		#chk{
+			position: absolute;
+			z-index: -10;
+			visibility: hidden;
+		}
+		#banner{
+			width: 100%;
+			height:100%;
+			position: relative;
+			z-index: -3;
+		}
+		#banner img{
+			width:100%;
+		}
+		#banner h1{
+			position: absolute;
+			font-size: 8rem;
+			top:50px;
+			left:50px;
+			color:black;
+		}
+		#team_container{
+			width:100%;
+			border: 5px solid black;
+			height:500px;
+
+		}
+		#team_container h3{
+			height:80px;
+			background-color: lightblue;
+			text-align: center;
+			text-decoration: underline;
+			padding:15px; 
+			font-size: 3rem;
+
+		}
+		#circle_container{
+			width:100%;
+			clear: both;
+		}
+		.circle{
+			width: 250px;
+			height: 250px;
+			margin-bottom: 15px;
+			float: left;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 15px;
+		}
+		.circle img{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+		#projects h3{
+			height:80px;
+			background-color: lightblue;
+			text-align: center;
+			text-decoration: underline;
+			padding:15px; 
+			font-size: 3rem;
+
+		}
+		#projects{
+			clear: both;
+		}
+		#left{
+			width:47%;
+			height:530px;
+			background-color: black;
+			text-align: justify;
+			color: white;
+			padding: 15px;
+			float: left;
+		}
+		#right{
+			float: right;
+			width:50%;
+			margin-left: 15px;
+		}
+		.article img{
+			height: 173px;
+			width:100%;
+		}
+		#technology_container{
+			width:100%;
+			clear:both;
+			padding: 20px;
+			height: 750px;
+
+		}
+		.rect{
+			width:20%;
+			height:445px;
+			float: left;
+			margin:2%;
+			border:2px solid grey;
+			padding: 7px;
+			text-align: justify;
+		}
+		.rect img{
+			width:100%;
+			height:175px;
+		}
+		.rect h4{
+			text-align: center;
+		}
+		#technology_container h3{
+			height:80px;
+			background-color: lightblue;
+			text-align: center;
+			text-decoration: underline;
+			padding:15px; 
+			font-size: 3rem;
+
+		}
+		.rect a{
+			display: block;
+			background-color: red;
+			color: white;
+			padding: 5px;
+			border-radius: 5px;
+			text-align: center;
+			text-decoration: none;
+		}
+		#footer h3{
+			height:80px;
+			background-color: lightblue;
+			text-align: center;
+			text-decoration: underline;
+			padding:15px; 
+			font-size: 3rem;
+
+		}
+		#footer p{
+			height:160px;
+			background-color: pink;
+			text-align: center;
+			line-height: 160px;
+			
+		}
+		
+		@media (max-width:863px) and (min-width: 625px){
+			.show-btn,.hide-btn{
+				display: block;
+			}
+			#menu{
+				position: fixed;
+				top:0;
+				right:-100%;
+				width: 50%;
+				height: 100vh;
+				background-color: black;
+				padding: 80px 0px;
+				text-align: center;
+				transition: .7s;
+				line-height: normal;
+			}
+			#chk:checked ~#menu{
+				right: 0;
+
+			}
+			#menu li{
+				display: block;
+				float: none;
+			}
+			#menu li a{
+				display: block;
+			}
+			.hide-btn{
+				position: absolute;
+				right: 20px;
+				top:10px;
+			}
+			#banner h1{
+			font-size: 4rem;
+			top:30px;
+			left:30px;
+			}
+			#team_container{
+				height:800px;
+			}
+			.circle{
+				margin-left: 4%;
+				margin-right: 4%;
+			}
+			#left{
+				width:100%;
+				float: none;
+				height: 400px;
+			}
+			#right{
+				width: 100%;
+				float: none;
+				margin-left: 0;
+
+			}
+			#technology_container{
+				height:1215px;
+			}
+			.rect{
+				width:40%;
+				height:495px;
+				display: block;
+				float:left;
+				margin-left: 5%;
+				margin-right: 5%;
+				text-align: center;
+			}
+        }
+
+
+        @media (min-width:864px) and (max-width:1119px){
+			.show-btn,.hide-btn{
+				display: block;
+			}
+			#menu{
+				position: fixed;
+				top:0;
+				right:-100%;
+				width: 50%;
+				height: 100vh;
+				background-color: black;
+				padding: 80px 0px;
+				text-align: center;
+				transition: .7s;
+				line-height: normal;
+			}
+			#chk:checked ~#menu{
+				right: 0;
+
+			}
+			#menu li{
+				display: block;
+				float: none;
+			}
+			#menu li a{
+				display: block;
+			}
+			.hide-btn{
+				position: absolute;
+				right: 20px;
+				top:10px;
+			}
+			#banner h1{
+			font-size: 6rem;
+			top:40px;
+			left:40px;
+			}
+			.circle{
+				margin-left:10%;
+				margin-right:10%;
+			}
+			#team_container{
+				height:800px;
+			}
+			#technology_container{
+				padding: 0;
+			}
+			.rect{
+				width:22%;
+				height:535px;
+				display: block;
+				float:left;
+				margin-left:1%;
+				margin-right: 2%;
+				text-align: center;
+			}
+        }
+
+        @media (max-width:624px){
+			.show-btn,.hide-btn{
+				display: block;
+			}
+			#menu{
+				position: fixed;
+				top:0;
+				right:-100%;
+				width: 50%;
+				height: 100vh;
+				background-color: black;
+				padding: 80px 0px;
+				text-align: center;
+				transition: .7s;
+				line-height: normal;
+			}
+			#chk:checked ~#menu{
+				right: 0;
+
+			}
+			#menu li{
+				display: block;
+				float: none;
+			}
+			#menu li a{
+				display: block;
+			}
+			.hide-btn{
+				position: absolute;
+				right: 20px;
+				top:10px;
+			}
+			#banner h1{
+			font-size: 2rem;
+			top:10px;
+			left:10px;
+			}
+			.circle{
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			#team_container{
+				height:1275px;
+			}
+			#left{
+				width:100%;
+				float: none;
+				height: 400px;
+			}
+			#right{
+				width: 100%;
+				float: none;
+				margin-left: 0;
+
+			}
+			.rect{
+				width:50%;
+				height:495px;
+				display: block;
+				float:none;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			#technology_container{
+				height:2200px;
+			}
+        }
+
+        @media (min-width:1120px){
+			
+        }
+	</style>
+</head>
+<body>
+		<div id="header">
+			<input type="checkbox" id="chk">
+			<label for="chk" class="show-btn">
+				<i class="fa fa-bars" ></i>
+			</label>
+			<div id="menu">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#team">Team Members</a></li>
+					<li><a href="#proj">Projects</a></li>
+					<li><a href="#tecno">Technology</a></li>
+					<li><a href="#foot">Contact</a></li>
+					<input type="checkbox" id="chk">
+					<label for="chk" class="hide-btn">
+						<i class="fa fa-times" ></i>
+					</label>
+				</ul>
+			</div>
+		</div>
+
+		<a name="home"></a>
+		<div id="banner">
+			<h1>Practical-9</h1>
+			<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\computer_image.JPG">
+		</div>
+
+		<a name="team"></a>
+		<div id="team_container">
+			</br></br></br>
+			<h3>Team Members</h3>
+		    </br></br></br></br>
+		    <div id="cicle_container">
+			    <div class="circle"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\person1.JPG"></div>
+			    <div class="circle"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\person2.JPG"></div>
+			    <div class="circle"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\person3.JPG"></div>
+			    <div class="circle"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\person4.JPG"></div>
+		    </div>
+		</div>
+
+		<a name="proj"></a>
+		<div id="projects">
+			</br></br></br>
+			<h3>Projects</h3>
+		    </br></br></br></br>	
+
+		    <div id="left">
+		    	<p>
+		    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		    	
+		    	
+		    	
+		    </p>
+		    </div>
+
+		    <div id="right">
+		    	<div class="article"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section1.JPG"></div>
+		    	<div class="article"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section2.JPG"></div>
+		    	<div class="article"><img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\section3.JPG"></div>
+		    </div>
+		</div>
+
+		
+		<a name="tecno"></a>
+		<div id="technology_container">
+			</br></br></br>
+			<h3>Technology</h3>
+		    </br></br></br></br>
+			<div class="rect">
+				<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\html_logo.JPG">
+				</br>
+				</br>
+				<h4>Introduction to HTML</h4>
+				</br>
+				</br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				</br>
+				<a href="practical5.html">Learn More</a>
+			</div>
+
+			<div class="rect">
+				<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\css_logo.JPG">
+				</br>
+				</br>
+				<h4>Introduction to CSS</h4>
+				</br>
+				</br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				</br>
+				<a href="practical5.html">Learn More</a>
+			</div>
+
+			<div class="rect">
+				<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\javascript_logo.JPG">
+				</br>
+				</br>
+				<h4>Introduction to JavaScript</h4>
+				</br>
+				</br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				</br>
+				<a href="practical5.html">Learn More</a>
+			</div>
+
+			<div class="rect">
+				<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\bootstrap_logo.JPG">
+				</br>
+				</br>
+				<h4>Introduction to Bootstrap</h4>
+				</br>
+				</br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				</br>
+				<a href="practical5.html">Learn More</a>
+			</div>
+			
+		</div>
+
+
+		<a name="foot"></a>
+		<div id="footer">
+			</br></br></br>
+			<h3>Contact Us</h3>
+		    </br></br></br></br>
+
+			<p>Website Template for Practical-9
+			
+			<a href="#home">Back to Top</a>
+			</p>
+			
+		    </br></br></br></br>
+		</div>
+</body>
+</html>
