@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Vertical Bar</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style >
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.header{
+			width: 100%;
+			height:70px;
+			
+			background-color: #117864 ;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.header h2{
+			color: white;
+			line-height: 70px;
+			font-size:2rem;
+
+
+		}
+		.header img{
+			border-radius: 8px;
+			height:40px;
+			margin-right: 20px;
+		}
+		.content{
+			
+			width:100%;
+			padding: 20px;
+			margin-top: 10px;
+			float: right;
+			border:5px solid black;
+
+			
+		}
+		.content img{
+			display: block;
+			width: 100%;
+			max-width: 700px;
+			margin:auto;
+			
+		}
+		.content p{
+			text-align: justify;
+			
+		}
+		#side-bar{
+			position: fixed;
+			top:70px;
+			background-color: #154360;
+			width:30%;
+			height:100%;
+			transition: .7s;
+			left:-100%;
+		}
+		#side-bar ul li{
+			
+			border-bottom: 3px solid #F7DC6F;
+
+		}
+		#side-bar li:hover{
+			border-left: 10px solid #F1C40F  ;
+		}
+		#side-bar ul li a{
+			display: block;
+			text-decoration: none;
+			color:#ECF0F1 ;
+			font-weight: bold;
+			padding: 15px 25px;
+			transition: .7s;
+		}
+		a i {
+			margin-right:15px;
+		}
+		.show-btn,.hide-btn{
+			font-size: 35px;
+			color: white;
+			position: fixed;
+			top:20px;
+			left:50px;
+		}
+		.hide-btn{
+			opacity: 0;
+		}
+		#chk:checked ~ #side-bar{
+			left: 0;
+		}
+		#chk:checked ~ .show-btn{
+			opacity: 0;
+		}
+		#chk:checked ~ .hide-btn{
+			opacity: 1;
+		}
+		#chk:checked ~ .content{
+			width:70%;
+		}
+	</style>
+</head>
+<body>
+		<div class="header">
+			
+			<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\full_stack_logo.PNG">
+			<h2>FullStack</h2>
+			
+		</div>
+		<div class="content">
+			<img src="C:\Users\HP\Desktop\FullStack_files\Assignment_FullStack_2\images\computer_image.JPG">
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="show-btn">
+				<i class="fa fa-bars" ></i>
+		</label>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="hide-btn">
+				<i class="fa fa-times" ></i>
+		</label>
+		<div id="side-bar">
+			
+			<ul>
+				<li><a href="#"><i class="fa fa-home"><span>HOME</span></i></a></li>
+				<li><a href="#"><i class="fa fa-user"><span>ABOUT US</span></i></a></li>
+				<li><a href="#"><i class="fa fa-tasks"><span>SERVICES</span></i></a></li>
+				<li><a href="#"><i class="fa fa-rss"><span>BLOG</span></i></a></li>
+				<li><a href="#"><i class="fa fa-id-card"><span>CONTACT</span></i></a></li>
+				
+			</ul>
+		</div>
+</body>
+</html>
