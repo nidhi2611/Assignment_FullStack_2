@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Footer</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+	#content{
+		text-align: center;
+		width: 100%;
+		font-size: 3rem;
+		color: grey;
+		text-transform: uppercase;
+		font-family: Arial;
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+	#footer{
+		background-color: black;
+		width:100%;
+	}
+	#footer #section1 h2{
+		color:white;
+		text-transform: uppercase;
+		font-family: Arial;
+		margin-bottom: 5px;
+		font-size: 20px;
+	}
+	#section1{
+		clear:both;
+		padding: 3%;
+		height:250px;
+
+	}
+	#footer #description{
+		width:40%;
+		font-family: Arial;
+		color: grey;
+		float:left;
+	}
+	#footer #link-set-1{
+		width:11%;
+		font-family: Arial;
+		color: grey;
+		float:left;
+		margin-left: 6%;
+	}
+	#footer #link-set-2{
+		width:11%;
+		font-family: Arial;
+		color: grey;
+		float:left;
+		margin-left: 3%;
+	}
+	#footer #link-set-3{
+		width:20%;
+		font-family: Arial;
+		color: grey;
+		float:left;
+		margin-left: 3%;
+	}
+	#section1 a{
+		text-decoration: none;
+		color: grey;
+		font-family: Arial;
+	}
+	#section1 a:hover{
+		
+		color: orange;
+		
+	}
+	#section2{
+		clear:both;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		color:grey;
+		padding:2%;
+	}
+    #section2 h2{
+    	float:right;
+    	font-family: Arial;
+    	margin-right:1%;
+    }
+     #section2 a{
+    	width:7%;
+    	padding: 0.5%;
+    	text-align: center;
+    	background-color: red;
+    	border-radius: 25%;
+    	text-decoration: none;
+    	color:white;
+    }
+    #section2 a:hover{
+    	background-color: orange;
+    }
+    #section3{
+    	display:flex;
+    	align-items: center;
+    	justify-content: center;
+    	padding:25px;
+        clear:both;
+    }
+    #section3 li{
+    	float:left;
+    	margin-left:25px;
+    }
+    #section3 a{
+    	background-color:rgba(211,211,211,4);padding: 10px;border-radius:50%;
+    }
+    #section3 a:hover{
+    	background-color:yellowgreen;
+    }
+    #section4{
+    	display:flex;
+    	align-items: center;
+    	justify-content: center;
+    	padding:25px;
+    }
+    #section4 a{
+    	color:grey;
+    }
+    #section4 a:hover{
+    	color:orange;
+    }
+    @media(max-width:1000px){
+    	#footer #description{
+		width:100%;
+		float:none;
+		margin-bottom:25px;
+	}
+		#footer #link-set-1{
+		width:20%;
+		margin-right: 6%;
+	}
+	#footer #link-set-2{
+		width:30%;
+		float:left;
+		margin-left: 3%;
+	}
+	#footer #link-set-3{
+		width:20%;
+		float:left;
+		margin-left: 3%;
+	}
+    }
+	</style>
+</head>
+
+<body>
+		<div id="content">Content Area</div>
+
+		<div id="footer">
+			<div id="section1">
+				<div id="description">
+					<h2>About Us</h2>
+					<p style="justify-content: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+
+				<div id="link-set-1">
+					<h2>Categories</h2>
+					<ul style="list-style: none;">
+						<li><a href="#">C</a></li>
+						<li><a href="#">Designing</a></li>
+						<li><a href="#">PHP</a></li>
+						<li><a href="#">Java</a></li>
+						<li><a href="#">Android</a></li>
+						<li><a href="">Hybrid Apps</a></li>
+					</ul>
+				</div>
+
+				<div id="link-set-2">
+					<h2>Quick Links</h2>
+					<ul style="list-style: none;">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Contribute</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Sitemap</a></li>
+						<li><a href="">Disclaimer</a></li>
+					</ul>
+				</div>
+
+				<div id="link-set-3">
+					<h2>Contact Us</h2>
+					<ul style="list-style: none;">
+						<li><i class="fa fa-home" style="margin-right: 5px;"></i><span>Agra, Uttar Pradesh,India</span></li>
+						<li><i class="fa fa-envelope" style="margin-right: 5px;"></i><span>nidhi.gupta_cs18</span></li>
+						<li><i class="fa fa-mobile" style="margin-right: 5px;"></i><span>Mobile:6396492523</span></li>
+						<li><i class="fa fa-facebook-official" style="margin-right: 5px;"></i><span><a href="#"> Nidhi gupta</a></span></li>
+					</ul>
+				</div>
+			</div>
+
+		<hr width="100%">
+		<div id="section2">
+			<h2>Register for Free    </h2>
+			<a href="#">SIGN UP!</a>
+		</div>
+
+		<hr width="100%" color:grey>
+		<div id="section3">
+			<ul style="list-style: none;">
+				<li style="font-size: 20px;"><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li style="font-size: 20px;"><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li style="font-size: 20px;"><a href="#"><i class="fa fa-google"></i></a></li>
+				<li style="font-size: 20px;"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				
+			</ul>
+		</div>
+
+		<div id="section4">
+			<p style="color:grey;margin-right: 7px;">Copyright &copy 2020 All Rights Reserved by</p>
+			<a href="#" style="text-decoration: none;"> Nidhi Gupta</a>
+		</div>
+	</div>
+</body>
+</html>
