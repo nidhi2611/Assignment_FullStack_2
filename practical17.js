@@ -24,21 +24,21 @@ function showtime(){
 	if(hours>=12 && hours<17)
 		{
 			greet='Good Afternoon';
-			document.body.style.backgroundImage="url('C:\Users\HP\Desktop\afternoon_scene.jpg')";
+			document.body.style.backgroundImage="url('afternoon_scene.jpg')";
 		}
 	else if(hours>=17 && hours<21)
 		{greet='Good Evening';
-		document.body.style.backgroundImage="url('C:\Users\HP\Desktop\evening_scene.jpg')";
+		document.body.style.backgroundImage="url('evening_scene.jpg')";
 		}
 	else if(hours>=21 && hours<24)
 		{greet='Good Night';
-		document.body.style.backgroundImage="url('C:\Users\HP\Desktop\night_scene.jpg')";
-		//document.body.style.color="white";
+		document.body.style.backgroundImage="url('night_scene.jpg')";
+		document.body.style.color="white";
 		}
 	else
 		{
 		greet='Good Morning';
-		document.body.style.backgroundImage="url('C:\Users\HP\Desktop\morning_scene.jpg')";
+		document.body.style.backgroundImage="url('morning_scene.jpg')";
 		
        }
 	greeting.innerHTML=greet;
