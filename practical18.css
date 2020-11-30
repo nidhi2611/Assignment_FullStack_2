@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(270deg , seagreen, skyblue);
+    background-image: red;
     height: 100vh;
     display: flex;
     justify-content: center;
