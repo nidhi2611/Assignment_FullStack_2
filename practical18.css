@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: red;
+    background-color: purple;
     height: 100vh;
     display: flex;
     justify-content: center;
